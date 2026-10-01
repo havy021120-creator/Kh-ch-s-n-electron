@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="vi">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261001-05-b7952c1","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khách Sạn Electron</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,700;9..144,800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:#164b62; --deep:#0d5367; --aqua:#17b8bf; --line:#b9e9e6;
+      --cream:#fffdf3; --room:#f5f7fc;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; width:100%; min-height:calc(100 * min(var(--vh, 1vh), 1vh));
+      font-family:"DM Sans",sans-serif; color:var(--ink); overflow-x:hidden;
+    }
+    .presentation-stage {
+      width:100%; min-height:calc(100 * min(var(--vh, 1vh), 1vh)); padding:clamp(8px,1.2vw,22px);
+      display:flex; align-items:flex-start; justify-content:center; overflow:visible;
+      background:
+        radial-gradient(circle at 8% 8%,rgba(255,255,255,.88) 0 2px,transparent 3px),
+        radial-gradient(circle at 90% 18%,rgba(255,255,255,.6) 0 2px,transparent 3px),
+        linear-gradient(135deg,#dcfff4 0%,#c9f5f4 49%,#dff8df 100%);
+    }
+    .slide-frame {
+      width:min(100%,1920px); min-height:0; aspect-ratio:16/9; max-height:none;
+      margin:auto; display:flex; flex-direction:column; overflow:visible;
+      border:clamp(3px,.25vw,5px) solid rgba(255,255,255,.88); border-radius:clamp(15px,1.25vw,25px);
+      background:rgba(255,255,255,.38); box-shadow:0 20px 48px rgba(22,75,98,.2);
+    }
+    .topbar {
+      flex:0 0 auto; padding:clamp(15px,1.35vw,27px) clamp(18px,1.8vw,35px);
+      background:linear-gradient(90deg,#effffd,#dffff3); border-bottom:1px solid rgba(22,75,98,.1);
+    }
+    .kicker { font-size:clamp(.58rem,.65vw,.78rem); font-weight:800; letter-spacing:.12em; color:#5594a0; text-transform:uppercase; }
+    .game-title { margin:3px 0 0; font-family:Fraunces,serif; color:var(--deep); line-height:1.02; }
+    .subtitle { margin:7px 0 0; color:#5b8990; font-size:clamp(.66rem,.78vw,.98rem); }
+    .stat-pill { min-width:clamp(85px,7.2vw,140px); padding:clamp(7px,.65vw,12px); border:1px solid var(--line); border-radius:13px; background:rgba(255,255,255,.8); }
+    .stat-label { display:block; color:#6f9ba1; font-size:clamp(.55rem,.58vw,.7rem); font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
+    .stat-value { display:block; margin-top:2px; color:var(--deep); font-size:clamp(.85rem,1vw,1.25rem); font-weight:800; }
+    main { min-height:0; flex:1; display:flex; flex-direction:column; }
+    .game-grid { min-height:0; flex:1; display:grid; grid-template-columns:minmax(245px,.72fr) minmax(0,1.95fr); gap:clamp(10px,.85vw,16px); padding:clamp(10px,.85vw,16px); }
+    .lobby-card,.hotel-card,.leaderboard-card { border:1px solid rgba(22,75,98,.12); border-radius:17px; background:rgba(255,255,255,.87); box-shadow:0 8px 18px rgba(22,75,98,.08); }
+    .lobby-card { padding:clamp(11px,.8vw,15px); }
+    .hotel-image-wrap { position:relative; height:clamp(105px,10.2vw,190px); overflow:hidden; border-radius:12px; background:#cdeef0; }
+    .hotel-image-wrap::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 45%,rgba(13,83,103,.22)); pointer-events:none; }
+    .hotel-image-wrap img { width:100%;height:100%;object-fit:cover; }
+    .mini-heading { margin:clamp(9px,.65vw,14px) 0 4px; color:var(--deep); font-size:clamp(.65rem,.67vw,.84rem); font-weight:800; letter-spacing:.04em; text-transform:uppercase; }
+    .hint-line { margin:0; color:#62949a; font-size:clamp(.62rem,.65vw,.8rem); line-height:1.35; }
+    .field-label { display:block; margin-bottom:5px; font-weight:700; font-size:clamp(.65rem,.68vw,.84rem); }
+    .input-control { width:100%; border:1px solid var(--line); border-radius:9px; padding:clamp(7px,.55vw,10px) 10px; color:var(--ink); background:#fbfffe; outline:none; font-size:clamp(.65rem,.7vw,.86rem); }
+    .input-control:focus { border-color:var(--aqua); box-shadow:0 0 0 3px rgba(23,184,191,.16); }
+    .element-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:5px; }
+    .element-button { min-width:0; border:1px solid var(--line); border-radius:8px; padding:clamp(5px,.4vw,8px) 2px; color:#176176; background:#effffc; font-size:clamp(.55rem,.59vw,.76rem); font-weight:800; transition:.18s ease; }
+    .element-button:hover,.element-button:focus-visible { transform:translateY(-2px); background:#d8f8ee; outline:3px solid rgba(23,184,191,.2); }
+    .element-button.active { color:#fff; background:var(--aqua); border-color:var(--aqua); box-shadow:0 4px 10px rgba(23,184,191,.27); }
+    .electron-lobby { min-height:clamp(58px,5.6vw,88px); display:flex; flex-wrap:wrap; align-content:flex-start; gap:5px; padding:8px; border:2px dashed #9bdedc; border-radius:11px; background:#f6fffd; }
+    .electron { width:clamp(18px,1.35vw,26px); height:clamp(18px,1.35vw,26px); display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; border-radius:50%; color:#fff; background:linear-gradient(145deg,#26c8d0,#0d9ca9); box-shadow:0 3px 0 #078390,0 4px 8px rgba(13,83,103,.18); font-size:clamp(.65rem,.73vw,.9rem); font-weight:800; cursor:grab; user-select:none; }
+    .electron:hover,.electron.selected { transform:translateY(-2px) scale(1.08); outline:3px solid rgba(255,213,104,.68); }
+    .action-button { display:inline-flex; align-items:center; justify-content:center; gap:6px; border:0; border-radius:9px; padding:clamp(7px,.55vw,10px) clamp(9px,.75vw,14px); font-size:clamp(.62rem,.7vw,.86rem); font-weight:800; cursor:pointer; transition:.18s ease; }
+    .action-button:hover { transform:translateY(-2px); filter:brightness(1.03); }
+    .action-button:focus-visible,.small-button:focus-visible { outline:3px solid rgba(13,83,103,.3); outline-offset:2px; }
+    .action-button:disabled { opacity:.6; cursor:not-allowed; transform:none; }
+    .primary-action { color:#fff; background:linear-gradient(135deg,#ff856d,#f95e61); }
+    .secondary-action { color:#176176; background:#ddf7f0; }
+    .hotel-card { overflow:hidden; min-height:0; display:flex; flex-direction:column; }
+    .hotel-banner { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:clamp(10px,.75vw,15px) clamp(13px,1vw,20px); color:#fff; background:linear-gradient(90deg,#079fb1,#20c6b1); }
+    .hotel-banner h2 { margin:0; font-family:Fraunces,serif; }
+    .hotel-banner p { margin:2px 0 0; color:rgba(255,255,255,.86); font-size:clamp(.62rem,.65vw,.82rem); }
+    .floor-stack { padding:clamp(12px,1vw,19px); overflow:visible; }
+    .floor { display:grid; grid-template-columns:clamp(70px,5.8vw,104px) 1fr; gap:clamp(9px,.8vw,15px); align-items:stretch; margin-bottom:clamp(9px,.78vw,15px); }
+    .floor-label { display:flex; align-items:center; justify-content:center; min-height:clamp(58px,5.8vw,92px); border-radius:10px; color:#fff; background:linear-gradient(145deg,#1bb8bf,#1597a5); font-size:clamp(.56rem,.58vw,.74rem); font-weight:800; text-align:center; }
+    .floor-rooms { display:flex; align-items:stretch; gap:clamp(4px,.45vw,8px); min-width:0; padding:clamp(5px,.45vw,8px); border:1px solid var(--line); border-radius:10px; background:#f6fffe; }
+    .orbital-group { display:flex; align-items:center; gap:clamp(4px,.42vw,7px); padding-right:clamp(4px,.42vw,8px); border-right:1px solid #cdecea; }
+    .orbital-group:last-child { padding-right:0; border-right:0; }
+    .orbital-name { min-width:25px; color:#278190; font-size:clamp(.57rem,.61vw,.75rem); font-weight:800; }
+    .room-row { display:flex; gap:3px; }
+    .orbital { width:clamp(40px,3.5vw,58px); height:clamp(44px,3.9vw,64px); display:flex; align-items:center; justify-content:center; gap:1px; border:2px solid #d7d9e5; border-radius:6px; background:var(--room); box-shadow:inset 0 0 0 2px rgba(255,255,255,.8); cursor:pointer; transition:.15s ease; }
+    .orbital:hover,.orbital.drop-hover,.orbital:focus-visible { border-color:var(--aqua); background:#e7fffd; transform:translateY(-1px); outline:none; }
+    .orbital .electron { width:clamp(16px,1.35vw,22px); height:clamp(26px,2vw,34px); border-radius:9px; font-size:clamp(.5rem,.58vw,.7rem); box-shadow:none; }
+    .label-only { display:flex; align-items:center; min-width:clamp(38px,3.2vw,50px); padding:0 7px; border-radius:7px; color:#7ea4a8; background:#ecf8f8; font-size:clamp(.55rem,.58vw,.74rem); font-weight:800; }
+    .feedback-panel { margin-top:clamp(7px,.55vw,11px); min-height:clamp(48px,4.2vw,62px); padding:clamp(8px,.6vw,12px); border:1px solid #cdecea; border-radius:10px; background:#f5fffc; }
+    .feedback-panel.success { border-color:#62ce9d; background:#e8fff1; }
+    .feedback-panel.error { border-color:#ffc1ad; background:#fff4ed; }
+    .feedback-title { margin:0; font-weight:800; font-size:clamp(.65rem,.72vw,.9rem); }
+    .feedback-copy { margin:3px 0 0; font-size:clamp(.6rem,.65vw,.82rem); line-height:1.35; }
+    .leaderboard-card { flex:0 0 auto; margin:0 clamp(10px,.85vw,16px) clamp(10px,.85vw,16px); overflow:hidden; }
+    .leaderboard-header { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:clamp(9px,.65vw,13px) clamp(12px,.85vw,16px); color:#fff; background:#12596b; }
+    .leaderboard-header h2 { margin:0; }
+    .leaderboard-list { padding:6px 14px 8px; }
+    .rank-row { display:grid; grid-template-columns:28px 1fr 65px 75px; align-items:center; gap:8px; padding:6px 2px; border-bottom:1px solid #e3f2ef; font-size:clamp(.62rem,.67vw,.82rem); }
+    .rank-row:last-child { border-bottom:0; }
+    .rank-number { width:23px; height:23px; display:grid; place-items:center; border-radius:50%; color:#0d6574; background:#dff8ef; font-weight:800; }
+    .empty-rank { margin:0; padding:8px 2px; color:#6b969a; font-size:clamp(.62rem,.65vw,.8rem); text-align:center; }
+    .admin-zone { display:flex; flex-wrap:wrap; align-items:end; gap:7px; padding:8px 14px 11px; border-top:1px solid #e3f2ef; background:#f9fffe; }
+    .admin-zone .input-control { max-width:210px; padding:7px 9px; }
+    .small-button { border:0; border-radius:8px; padding:8px 10px; color:#fff; background:#e56f64; font-size:clamp(.6rem,.63vw,.78rem); font-weight:800; cursor:pointer; }
+    @media (max-width:1100px) {
+      .presentation-stage { display:block; padding:8px; }
+      .slide-frame { width:100%; aspect-ratio:auto; max-height:none; min-height:0; }
+      .game-grid { grid-template-columns:1fr; }
+      .hotel-image-wrap { height:180px; }
+    }
+    @media (max-width:590px) {
+      .topbar { padding:14px; }
+      .floor-rooms { overflow-x:auto; }
+      .leaderboard-header { align-items:flex-start; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/6c2ecc939521f244.data_sdk.js" type="text/javascript" integrity="sha512-gRx8s+XsZDN6mSIQu2sivLZysbV0WHhb5kXNUWlgVb5lCMU1foJYukyMEDPv8Tnoocb8iwqB4XdRrWc7oEGzIQ=="></script>
+  <script src="/_sdk/9a95f4c89f9d329a.editing_sdk.js" type="text/javascript" integrity="sha512-uqCEJTMLGkNaerhDaIXaCaksHwhGfiODxp6KAGyGJ3KnMlKU0zBHiRrGR0sESZuM3JlrF8iM9IVZakKW237LEQ=="></script>
+  <script src="/_sdk/ab4336f91e694f96.resizing_sdk.js" type="text/javascript" integrity="sha512-cxmeUrBrNlwwLr+tEu/iwM5F3boeK4qDMoH3QjUPqJptkO5NkaDVhQvyIHIn+3EflI5/uubWzkSA78B1tCswgA=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <div class="presentation-stage">
+   <div class="slide-frame">
+    <header class="topbar">
+     <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div>
+       <div data-template-id="game-kicker" class="canva-text kicker"></div>
+       <h1 data-template-id="game-title" class="canva-text game-title"></h1>
+       <p data-template-id="game-subtitle" class="canva-text subtitle"></p>
+      </div>
+      <div class="flex gap-2">
+       <div class="stat-pill">
+        <span data-template-id="score-label" class="canva-text stat-label"></span><span id="score-display" class="stat-value" aria-live="polite">0</span>
+       </div>
+       <div class="stat-pill">
+        <span data-template-id="time-label" class="canva-text stat-label"></span><span id="time-display" class="stat-value" aria-live="polite">00:00</span>
+       </div>
+      </div>
+     </div>
+    </header>
+    <main>
+     <section class="game-grid" aria-label="Khu vực trò chơi">
+      <aside class="lobby-card" aria-label="Sảnh chờ electron">
+       <div class="hotel-image-wrap">
+        <img data-template-id="hotel-illustration" class="canva-image" loading="lazy">
+       </div>
+       <h2 data-template-id="lobby-heading" class="canva-text mini-heading"></h2>
+       <p data-template-id="lobby-description" class="canva-text hint-line"></p>
+       <form id="team-form" class="mt-2"><label data-template-id="team-label" class="canva-text field-label" for="team-name"></label> <input id="team-name" class="input-control" type="text" maxlength="40" autocomplete="off">
+       </form>
+       <h3 data-template-id="element-heading" class="canva-text mini-heading"></h3>
+       <div class="element-grid" aria-label="Chọn nguyên tố"><button data-template-id="element-n" class="canva-button element-button" type="button" data-element="N"></button> <button data-template-id="element-o" class="canva-button element-button" type="button" data-element="O"></button> <button data-template-id="element-na" class="canva-button element-button" type="button" data-element="Na"></button> <button data-template-id="element-mg" class="canva-button element-button" type="button" data-element="Mg"></button> <button data-template-id="element-al" class="canva-button element-button" type="button" data-element="Al"></button> <button data-template-id="element-p" class="canva-button element-button" type="button" data-element="P"></button> <button data-template-id="element-s" class="canva-button element-button" type="button" data-element="S"></button> <button data-template-id="element-cl" class="canva-button element-button" type="button" data-element="Cl"></button> <button data-template-id="element-mn" class="canva-button element-button" type="button" data-element="Mn"></button> <button data-template-id="element-fe" class="canva-button element-button" type="button" data-element="Fe"></button>
+       </div>
+       <h3 data-template-id="waiting-heading" class="canva-text mini-heading"></h3>
+       <div id="electron-lobby" class="electron-lobby" aria-label="Electron đang chờ"></div>
+       <div class="mt-2 flex flex-wrap gap-2"><button id="check-button" data-template-id="check-button" class="canva-button action-button primary-action" type="button"><i data-lucide="circle-check" class="w-4 h-4"></i><span data-template-id="check-button-label" class="canva-text">Kiểm tra đáp án</span></button> <button id="reset-button" data-template-id="reset-button" class="canva-button action-button secondary-action" type="button"><i data-lucide="rotate-ccw" class="w-4 h-4"></i><span data-template-id="reset-button-label" class="canva-text">Làm lại</span></button>
+       </div>
+      </aside>
+      <section class="hotel-card" aria-labelledby="hotel-heading">
+       <div data-template-id="hotel-banner" class="canva-banner hotel-banner">
+        <div>
+         <h2 data-template-id="hotel-heading" class="canva-text"></h2>
+         <p data-template-id="hotel-helper" class="canva-text"></p>
+        </div><i data-lucide="building-2" class="w-7 h-7" aria-hidden="true"></i>
+       </div>
+       <div class="floor-stack">
+        <section class="floor" aria-label="Tầng 1">
+         <div data-template-id="floor-one-label" class="canva-text floor-label"></div>
+         <div class="floor-rooms">
+          <div class="orbital-group">
+           <span data-template-id="room-1s-label" class="canva-text orbital-name"></span>
+           <div class="room-row">
+            <button class="orbital" type="button" data-orbital="1s-1" aria-label="Ô orbital 1s"></button>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="floor" aria-label="Tầng 2">
+         <div data-template-id="floor-two-label" class="canva-text floor-label"></div>
+         <div class="floor-rooms">
+          <div class="orbital-group">
+           <span data-template-id="room-2s-label" class="canva-text orbital-name"></span>
+           <div class="room-row">
+            <button class="orbital" type="button" data-orbital="2s-1" aria-label="Ô orbital 2s"></button>
+           </div>
+          </div>
+          <div class="orbital-group">
+           <span data-template-id="room-2p-label" class="canva-text orbital-name"></span>
+           <div class="room-row">
+            <button class="orbital" type="button" data-orbital="2p-1" aria-label="Ô orbital 2p số 1"></button><button class="orbital" type="button" data-orbital="2p-2" aria-label="Ô orbital 2p số 2"></button><button class="orbital" type="button" data-orbital="2p-3" aria-label="Ô orbital 2p số 3"></button>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="floor" aria-label="Tầng 3">
+         <div data-template-id="floor-three-label" class="canva-text floor-label"></div>
+         <div class="floor-rooms">
+          <div class="orbital-group">
+           <span data-template-id="room-3s-label" class="canva-text orbital-name"></span>
+           <div class="room-row">
+            <button class="orbital" type="button" data-orbital="3s-1" aria-label="Ô orbital 3s"></button>
+           </div>
+          </div>
+          <div class="orbital-group">
+           <span data-template-id="room-3p-label" class="canva-text orbital-name"></span>
+           <div class="room-row">
+            <button class="orbital" type="button" data-orbital="3p-1" aria-label="Ô orbital 3p số 1"></button><button class="orbital" type="button" data-orbital="3p-2" aria-label="Ô orbital 3p số 2"></button><button class="orbital" type="button" data-orbital="3p-3" aria-label="Ô orbital 3p số 3"></button>
+           </div>
+          </div>
+          <div class="orbital-group">
+           <span data-template-id="room-3d-label" class="canva-text orbital-name"></span>
+           <div class="room-row">
+            <button class="orbital" type="button" data-orbital="3d-1" aria-label="Ô orbital 3d số 1"></button><button class="orbital" type="button" data-orbital="3d-2" aria-label="Ô orbital 3d số 2"></button><button class="orbital" type="button" data-orbital="3d-3" aria-label="Ô orbital 3d số 3"></button><button class="orbital" type="button" data-orbital="3d-4" aria-label="Ô orbital 3d số 4"></button><button class="orbital" type="button" data-orbital="3d-5" aria-label="Ô orbital 3d số 5"></button>
+           </div>
+          </div>
+         </div>
+        </section>
+        <section class="floor" aria-label="Tầng 4">
+         <div data-template-id="floor-four-label" class="canva-text floor-label"></div>
+         <div class="floor-rooms">
+          <div class="orbital-group">
+           <span data-template-id="room-4s-label" class="canva-text orbital-name"></span>
+           <div class="room-row">
+            <button class="orbital" type="button" data-orbital="4s-1" aria-label="Ô orbital 4s"></button>
+           </div>
+          </div><span data-template-id="room-4p-label" class="canva-text label-only"></span> <span data-template-id="room-4d-label" class="canva-text label-only"></span> <span data-template-id="room-4f-label" class="canva-text label-only"></span>
+         </div>
+        </section>
+        <div id="feedback-panel" class="feedback-panel" aria-live="polite">
+         <p id="feedback-title" class="feedback-title">Chọn một nguyên tố để bắt đầu.</p>
+         <p id="feedback-copy" class="feedback-copy">Kéo electron từ sảnh chờ vào các phòng orbital.</p>
+        </div>
+       </div>
+      </section>
+     </section>
+     <section class="leaderboard-card" aria-labelledby="leaderboard-heading">
+      <div data-template-id="leaderboard-banner" class="canva-banner leaderboard-header">
+       <div>
+        <h2 data-template-id="leaderboard-heading" class="canva-text"></h2>
+        <p data-template-id="leaderboard-helper" class="canva-text m-0 text-xs"></p>
+       </div><i data-lucide="trophy" class="w-6 h-6" aria-hidden="true"></i>
+      </div>
+      <div id="leaderboard-list" class="leaderboard-list">
+       <p data-template-id="leaderboard-empty" class="canva-text empty-rank"></p>
+      </div>
+      <form id="clear-form" class="admin-zone">
+       <div><label data-template-id="admin-label" class="canva-text field-label mb-1" for="admin-code"></label> <input id="admin-code" class="input-control" type="text" autocomplete="off">
+       </div><button id="clear-button" data-template-id="clear-button" class="canva-button small-button" type="submit"></button> <span id="admin-message" class="text-xs font-semibold text-[#6c9296]" aria-live="polite"></span>
+      </form>
+     </section>
+    </main>
+   </div>
+  </div>
+  <script>
+    const elements = {
+      N:{z:7,configuration:"1s² 2s² 2p³"}, O:{z:8,configuration:"1s² 2s² 2p⁴"},
+      Na:{z:11,configuration:"1s² 2s² 2p⁶ 3s¹"}, Mg:{z:12,configuration:"1s² 2s² 2p⁶ 3s²"},
+      Al:{z:13,configuration:"1s² 2s² 2p⁶ 3s² 3p¹"}, P:{z:15,configuration:"1s² 2s² 2p⁶ 3s² 3p³"},
+      S:{z:16,configuration:"1s² 2s² 2p⁶ 3s² 3p⁴"}, Cl:{z:17,configuration:"1s² 2s² 2p⁶ 3s² 3p⁵"},
+      Mn:{z:25,configuration:"1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁵"}, Fe:{z:26,configuration:"1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3p⁶ 4s² 3d⁶"}
+    };
+    const orbitalOrder=["1s-1","2s-1","2p-1","2p-2","2p-3","3s-1","3p-1","3p-2","3p-3","4s-1","3d-1","3d-2","3d-3","3d-4","3d-5"];
+    let selectedElement=null, score=0, startTime=null, timerInterval=null, selectedElectron=null, completed=false, rankings=[];
+    const lobby=document.getElementById("electron-lobby"), scoreDisplay=document.getElementById("score-display"), timeDisplay=document.getElementById("time-display");
+    const feedbackPanel=document.getElementById("feedback-panel"), feedbackTitle=document.getElementById("feedback-title"), feedbackCopy=document.getElementById("feedback-copy");
+    const checkButton=document.getElementById("check-button");
+
+    function formatTime(seconds){return `${String(Math.floor(seconds/60)).padStart(2,"0")}:${String(seconds%60).padStart(2,"0")}`;}
+    function elapsedSeconds(){return startTime ? Math.floor((Date.now()-startTime)/1000) : 0;}
+    function setFeedback(type,title,copy){feedbackPanel.classList.remove("success","error");if(type)feedbackPanel.classList.add(type);feedbackTitle.textContent=title;feedbackCopy.textContent=copy;}
+    function createElectron(id){
+      const electron=document.createElement("span");
+      electron.className="electron"; electron.draggable=true; electron.dataset.electronId=id; electron.textContent="↑"; electron.setAttribute("aria-label","Electron có thể kéo");
+      electron.addEventListener("dragstart",event=>event.dataTransfer.setData("text/plain",id));
+      electron.addEventListener("click",()=>{document.querySelectorAll(".electron.selected").forEach(item=>item.classList.remove("selected"));selectedElectron=electron;electron.classList.add("selected");});
+      return electron;
+    }
+    function clearOrbitals(){document.querySelectorAll(".orbital").forEach(orbital=>orbital.replaceChildren());}
+    function resetGame(showMessage=true){
+      if(!selectedElement)return;
+      completed=false; score=0; scoreDisplay.textContent=score; clearOrbitals(); lobby.replaceChildren(); selectedElectron=null;
+      for(let i=0;i<selectedElement.z;i++)lobby.appendChild(createElectron(`e-${i+1}`));
+      startTime=Date.now(); clearInterval(timerInterval); timerInterval=setInterval(()=>timeDisplay.textContent=formatTime(elapsedSeconds()),1000);
+      timeDisplay.textContent="00:00";
+      if(showMessage)setFeedback("","Lượt chơi mới đã sẵn sàng!","Hãy xếp electron theo thứ tự 1s → 2s → 2p → 3s → 3p → 4s → 3d.");
+    }
+    function moveElectronToOrbital(electron,orbital){
+      if(!electron||!orbital||completed)return;
+      if(orbital.children.length>=2){setFeedback("error","Phòng này đã đầy!","Mỗi ô orbital chỉ chứa tối đa 2 electron quay ngược chiều nhau.");return;}
+      if(electron.closest(".orbital")===orbital)return;
+      orbital.appendChild(electron);
+      orbital.querySelectorAll(".electron").forEach((item,index)=>item.textContent=index===0?"↑":"↓");
+      selectedElectron=null; document.querySelectorAll(".electron.selected").forEach(item=>item.classList.remove("selected"));
+    }
+    function expectedOccupancies(z){
+      const occupancies={}; orbitalOrder.forEach(key=>occupancies[key]=0); let remaining=z;
+      [["1s-1"],["2s-1"],["2p-1","2p-2","2p-3"],["3s-1"],["3p-1","3p-2","3p-3"],["4s-1"],["3d-1","3d-2","3d-3","3d-4","3d-5"]].forEach(group=>{
+        group.forEach(orbital=>{if(remaining>0){occupancies[orbital]++;remaining--;}});
+        group.forEach(orbital=>{if(remaining>0){occupancies[orbital]++;remaining--;}});
+      }); return occupancies;
+    }
+    function isCorrectConfiguration(){
+      const expected=expectedOccupancies(selectedElement.z);
+      return orbitalOrder.every(id=>document.querySelector(`[data-orbital="${id}"]`).children.length===expected[id]);
+    }
+    function playSuccessSound(){
+      const Context=window.AudioContext||window.webkitAudioContext;if(!Context)return;
+      const context=new Context();
+      [1046.5,1318.5].forEach((frequency,index)=>{const oscillator=context.createOscillator(),gain=context.createGain(),delay=index*.18;oscillator.frequency.value=frequency;gain.gain.setValueAtTime(.001,context.currentTime+delay);gain.gain.exponentialRampToValueAtTime(.14,context.currentTime+delay+.02);gain.gain.exponentialRampToValueAtTime(.001,context.currentTime+delay+.4);oscillator.connect(gain);gain.connect(context.destination);oscillator.start(context.currentTime+delay);oscillator.stop(context.currentTime+delay+.42);});
+    }
+    async function saveResult(){
+      const result=await window.dataSdk.create({team_name:document.getElementById("team-name").value.trim(),score,completion_time:elapsedSeconds(),completed_at:new Date().toISOString()});
+      if(!result.isOk)setFeedback("error","Đáp án đúng, nhưng chưa lưu được điểm.","Bạn vẫn hoàn thành chính xác. Hãy thử lại sau ít phút.");
+    }
+    async function checkAnswer(){
+      const teamName=document.getElementById("team-name").value.trim();
+      if(!teamName){setFeedback("error","Hãy nhập tên đội trước nhé!","Tên đội sẽ được dùng để ghi vào bảng xếp hạng.");document.getElementById("team-name").focus();return;}
+      if(!selectedElement){setFeedback("error","Chưa chọn nguyên tố.","Hãy chọn một nguyên tố từ sảnh chờ để nhận electron.");return;}
+      if(completed)return;
+      if(document.querySelectorAll(".orbital .electron").length!==selectedElement.z){setFeedback("error","Electron vẫn chưa vào đủ phòng!",`Nguyên tố ${selectedElement.symbol} có ${selectedElement.z} electron. Hãy xếp đủ trước khi kiểm tra.`);return;}
+      if(isCorrectConfiguration()){
+        completed=true;clearInterval(timerInterval);score+=10;scoreDisplay.textContent=score;playSuccessSound();
+        setFeedback("success","Bạn rất xuất sắc! Ting Ting ✨",`Cấu hình đúng của ${selectedElement.symbol}: ${selectedElement.configuration}. Bạn hoàn thành trong ${formatTime(elapsedSeconds())}.`);
+        checkButton.disabled=true;await saveResult();
+      }else{score-=5;scoreDisplay.textContent=score;setFeedback("error","Chưa chính xác, đội hãy thử lại!","Nhớ điền electron theo thứ tự mức năng lượng và ưu tiên electron độc thân tối đa trong các orbital cùng mức.");}
+    }
+    function renderLeaderboard(data){
+      rankings=[...data].sort((a,b)=>b.score!==a.score?b.score-a.score:a.completion_time-b.completion_time);
+      const list=document.getElementById("leaderboard-list");list.replaceChildren();
+      if(!rankings.length){const empty=document.createElement("p");empty.className="empty-rank";empty.textContent="Chưa có đội nào hoàn thành. Hãy trở thành đội đầu tiên!";list.appendChild(empty);return;}
+      rankings.slice(0,10).forEach((record,index)=>{
+        const row=document.createElement("div");row.className="rank-row";
+        const rank=document.createElement("span");rank.className="rank-number";rank.textContent=index+1;
+        const name=document.createElement("strong");name.textContent=record.team_name;
+        const points=document.createElement("span");points.className="font-bold text-[#0d6574]";points.textContent=`${record.score} điểm`;
+        const time=document.createElement("span");time.className="text-[#679398]";time.textContent=formatTime(record.completion_time);
+        row.append(rank,name,points,time);list.appendChild(row);
+      });
+    }
+    async function clearLeaderboard(event){
+      event.preventDefault();
+      const code=document.getElementById("admin-code"),message=document.getElementById("admin-message"),button=document.getElementById("clear-button");
+      if(code.value!=="anhvy02112005"){message.textContent="Mã xác nhận chưa đúng.";return;}
+      if(!rankings.length){message.textContent="Bảng xếp hạng đang trống.";return;}
+      button.disabled=true;message.textContent="Đang xoá bảng xếp hạng...";
+      let failed=false;for(const record of rankings){const result=await window.dataSdk.delete(record);if(!result.isOk){failed=true;break;}}
+      button.disabled=false;code.value="";message.textContent=failed?"Chưa thể xoá toàn bộ bảng. Hãy thử lại.":"Đã xoá bảng xếp hạng.";
+    }
+    document.querySelectorAll(".element-button").forEach(button=>button.addEventListener("click",()=>{
+      document.querySelectorAll(".element-button").forEach(item=>item.classList.remove("active"));button.classList.add("active");
+      selectedElement={symbol:button.dataset.element,...elements[button.dataset.element]};checkButton.disabled=false;resetGame();
+    }));
+    document.querySelectorAll(".orbital").forEach(orbital=>{
+      orbital.addEventListener("dragover",event=>{event.preventDefault();orbital.classList.add("drop-hover");});
+      orbital.addEventListener("dragleave",()=>orbital.classList.remove("drop-hover"));
+      orbital.addEventListener("drop",event=>{event.preventDefault();orbital.classList.remove("drop-hover");moveElectronToOrbital(document.querySelector(`[data-electron-id="${event.dataTransfer.getData("text/plain")}"]`),orbital);});
+      orbital.addEventListener("click",()=>{if(selectedElectron)moveElectronToOrbital(selectedElectron,orbital);});
+    });
+    lobby.addEventListener("dragover",event=>event.preventDefault());
+    lobby.addEventListener("drop",event=>{event.preventDefault();const electron=document.querySelector(`[data-electron-id="${event.dataTransfer.getData("text/plain")}"]`);if(electron&&electron.closest(".orbital")){lobby.appendChild(electron);electron.textContent="↑";}});
+    lobby.addEventListener("click",event=>{if(selectedElectron&&event.target===lobby){lobby.appendChild(selectedElectron);selectedElectron.textContent="↑";selectedElectron.classList.remove("selected");selectedElectron=null;}});
+    document.getElementById("team-form").addEventListener("submit",event=>event.preventDefault());
+    checkButton.addEventListener("click",checkAnswer);
+    document.getElementById("reset-button").addEventListener("click",()=>{checkButton.disabled=false;resetGame();});
+    document.getElementById("clear-form").addEventListener("submit",clearLeaderboard);
+    document.addEventListener("DOMContentLoaded",async()=>{
+      lucide.createIcons();
+      const result=await window.dataSdk.init({onDataChanged(data){renderLeaderboard(data);}});
+      if(!result.isOk)setFeedback("error","Không thể kết nối bảng xếp hạng.","Bạn vẫn có thể chơi trò chơi, nhưng kết quả chưa thể lưu lúc này.");
+    });
+  </script>
+ </body>
+</html>
